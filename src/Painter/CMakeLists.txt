@@ -5,5 +5,5 @@ file(GLOB_RECURSE HEADERS "*.h")
 
 ADD_MODULE(Painter
 	SOURCES ${SOURCES}
-	DEPENDS fmt
+	DEPENDS fmt opengl32
 )

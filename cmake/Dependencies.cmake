@@ -35,6 +35,28 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(imgui)
 
+# 引入glfw
+FetchContent_Declare(
+  glfw
+  GIT_REPOSITORY https://github.com/glfw/glfw.git
+  GIT_TAG        3.5.1
+)
+FetchContent_MakeAvailable(glfw)
+
+# 引入 glad（glad2）
+FetchContent_Declare(
+  glad
+  GIT_REPOSITORY https://github.com/Dav1dde/glad.git
+  GIT_TAG        v2.0.8
+  SOURCE_SUBDIR  cmake
+)
+FetchContent_MakeAvailable(glad)
+
+glad_add_library(glad_gl_core_33
+  REPRODUCIBLE
+  API gl:core=3.3
+)
+
 # 引入gtest
 FetchContent_Declare(
   googletest

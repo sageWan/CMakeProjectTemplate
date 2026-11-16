@@ -27,7 +27,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 include(Dependencies)
 include(ModuleUtils)
 
-add_subdirectory(src/OCCTImgui)
+add_subdirectory(src/App)
 
 option(BUILD_TESTS "Build tests" OFF)
 if(BUILD_TESTS)
